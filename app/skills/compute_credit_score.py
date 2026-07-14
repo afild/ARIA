@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: compute_credit_score
+This module is part of the ARIA core framework.
+"""
 import json
 import logging
 from typing import Dict, List

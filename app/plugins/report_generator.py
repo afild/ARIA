@@ -1,3 +1,8 @@
+"""
+Corporate Standard Module: report_generator
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 import logging
 import jinja2
 from pathlib import Path
@@ -6,7 +11,10 @@ from app.config import settings
 class ReportGenerator:
     """Plugin de geração de relatórios de risco e crédito utilizando Jinja2 e WeasyPrint (com fallback)."""
 
-    def __init__(self):
+    def __init__(self) -> Any:
+        """
+        Standard corporate docstring for __init__.
+        """
         self.reports_dir = Path(settings.REPORTS_DIR)
         self.reports_dir.mkdir(parents=True, exist_ok=True)
 

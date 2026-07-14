@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: alert_response
+This module is part of the ARIA core framework.
+"""
 import logging
 from typing import Dict
 from app.database.db_manager import SessionLocal

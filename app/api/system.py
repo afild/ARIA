@@ -1,3 +1,8 @@
+"""
+Corporate Standard Module: system
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.database.db_manager import get_db
@@ -9,7 +14,7 @@ from app.llm_client import get_llm_client
 router = APIRouter(prefix="/system", tags=["System"])
 
 @router.get("/status")
-def get_system_status(db: Session = Depends(get_db)):
+def get_system_status(db -> Any: Session = Depends(get_db)):
     """Retorna dados de integridade, status de conexões e quantidade de registros."""
     afis = AFISReader()
     apex = APEXReader()
@@ -39,7 +44,7 @@ def get_system_status(db: Session = Depends(get_db)):
     }
 
 @router.get("/audit-logs")
-def get_audit_logs(db: Session = Depends(get_db)):
+def get_audit_logs(db -> Any: Session = Depends(get_db)):
     """Retorna os logs de auditoria NIST AI RMF."""
     logs = db.query(NISTAuditLog).order_by(NISTAuditLog.created_at.desc()).limit(100).all()
     return logs

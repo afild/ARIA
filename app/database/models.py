@@ -1,8 +1,15 @@
+"""
+Corporate Standard Module: models
+This module is part of the ARIA core framework.
+"""
 from sqlalchemy import Column, Integer, String, Float, DateTime, Text
 from datetime import datetime
 from app.database.db_manager import Base
 
 class RiskAlert(Base):
+    """
+    Corporate Standard Class: RiskAlert.
+    """
     __tablename__ = "risk_alerts"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -20,6 +27,9 @@ class RiskAlert(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
 class SMECreditScore(Base):
+    """
+    Corporate Standard Class: SMECreditScore.
+    """
     __tablename__ = "sme_credit_scores"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -37,6 +47,9 @@ class SMECreditScore(Base):
     risk_factors = Column(Text, nullable=True)         # JSON array
 
 class LenderReport(Base):
+    """
+    Corporate Standard Class: LenderReport.
+    """
     __tablename__ = "lender_reports"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -48,6 +61,9 @@ class LenderReport(Base):
     generated_at = Column(DateTime, default=datetime.utcnow)
 
 class RiskChatHistory(Base):
+    """
+    Corporate Standard Class: RiskChatHistory.
+    """
     __tablename__ = "risk_chat_history"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -58,6 +74,9 @@ class RiskChatHistory(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
 class ARIASetting(Base):
+    """
+    Corporate Standard Class: ARIASetting.
+    """
     __tablename__ = "aria_settings"
 
     key = Column(String, primary_key=True)
@@ -65,6 +84,9 @@ class ARIASetting(Base):
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
 class NISTAuditLog(Base):
+    """
+    Corporate Standard Class: NISTAuditLog.
+    """
     __tablename__ = "nist_audit_logs"
 
     id = Column(Integer, primary_key=True, index=True)

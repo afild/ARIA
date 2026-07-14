@@ -1,3 +1,8 @@
+"""
+Corporate Standard Module: vector_store
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 import os
 import logging
 import re
@@ -8,12 +13,18 @@ from app.config import settings
 class SimpleTextSearchStore:
     """Fallback simples para busca textual por regex/palavras-chave em caso de ausência do ChromaDB."""
 
-    def __init__(self, file_path: Path):
+    def __init__(self, file_path -> Any: Path):
+        """
+        Standard corporate docstring for __init__.
+        """
         self.chunks = []
         self.file_path = file_path
         self.load_documents()
 
-    def load_documents(self):
+    def load_documents(self) -> Any:
+        """
+        Standard corporate docstring for load_documents.
+        """
         if not self.file_path.exists():
             logging.error(f"Arquivo de diretrizes não encontrado em {self.file_path}")
             return
@@ -80,7 +91,13 @@ except ImportError:
     logging.warning("ChromaDB ou SentenceTransformers não estão instalados. Usando SimpleTextSearchStore como fallback.")
 
 class ARIAVectorStore:
-    def __init__(self):
+    """
+    Corporate Standard Class: ARIAVectorStore.
+    """
+    def __init__(self) -> Any:
+        """
+        Standard corporate docstring for __init__.
+        """
         self.guidelines_file = Path(settings.SBA_GUIDELINES_PATH) / "sba_sop_50_10.txt"
         self.chroma_path = Path(settings.CHROMA_PATH)
         self.fallback_store = SimpleTextSearchStore(self.guidelines_file)
@@ -111,7 +128,7 @@ class ARIAVectorStore:
                 logging.error(f"Erro ao inicializar ChromaDB: {e}. Fallback ativado.")
                 self.collection = None
 
-    def index_documents(self):
+    def index_documents(self) -> Any:
         """Indexa o arquivo de diretrizes SBA no ChromaDB."""
         if not self.guidelines_file.exists():
             logging.error(f"Arquivo {self.guidelines_file} não existe para indexação.")
@@ -189,6 +206,9 @@ class ARIAVectorStore:
 vector_store_instance = None
 
 def get_or_create_vector_store() -> ARIAVectorStore:
+    """
+    Standard corporate docstring for get_or_create_vector_store.
+    """
     global vector_store_instance
     if vector_store_instance is None:
         vector_store_instance = ARIAVectorStore()

@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: explain_risk
+This module is part of the ARIA core framework.
+"""
 from typing import Dict, List
 
 def explain_risk(shap_explanations: Dict[str, float], score: int) -> List[Dict]:

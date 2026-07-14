@@ -1,9 +1,17 @@
+"""
+Corporate Standard Module: credit_bureau
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 import logging
 
 class CreditBureauConnector:
     """Plugin de conexão mock com bureaus de crédito comerciais (Experian / Equifax Business)."""
 
-    def __init__(self):
+    def __init__(self) -> Any:
+        """
+        Standard corporate docstring for __init__.
+        """
         pass
 
     def get_external_credit_score(self, company_tax_id: str) -> dict:

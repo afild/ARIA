@@ -1,3 +1,8 @@
+"""
+Corporate Standard Module: credit
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
@@ -14,7 +19,7 @@ from app.config import settings
 router = APIRouter(prefix="/credit", tags=["Credit"])
 
 @router.get("/score")
-def get_latest_score(year: Optional[int] = Query(None), db: Session = Depends(get_db)):
+def get_latest_score(year -> Any: Optional[int] = Query(None), db: Session = Depends(get_db)):
     """Busca o credit score mais recente ou do ano especificado."""
     query = db.query(SMECreditScore)
     if year:
@@ -136,7 +141,7 @@ async def generate_lender_report(body: dict):
         raise HTTPException(status_code=500, detail=f"Erro ao gerar laudo de crédito: {e}")
 
 @router.get("/lender-report/download")
-def download_lender_report(filename: str):
+def download_lender_report(filename -> Any: str):
     """Fornece o arquivo de relatório gerado (PDF ou HTML) para download."""
     reports_dir = Path(settings.REPORTS_DIR).resolve()
     file_path = reports_dir / filename

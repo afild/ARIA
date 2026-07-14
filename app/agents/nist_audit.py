@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: nist_audit
+This module is part of the ARIA core framework.
+"""
 import logging
 import json
 from typing import Dict

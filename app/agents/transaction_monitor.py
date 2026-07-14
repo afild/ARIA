@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: transaction_monitor
+This module is part of the ARIA core framework.
+"""
 import logging
 from typing import Dict
 from app.plugins.afis_reader import AFISReader

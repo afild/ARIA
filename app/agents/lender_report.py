@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: lender_report
+This module is part of the ARIA core framework.
+"""
 import logging
 from datetime import datetime
 from typing import Dict

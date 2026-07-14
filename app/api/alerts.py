@@ -1,3 +1,8 @@
+"""
+Corporate Standard Module: alerts
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import Optional, List
@@ -12,7 +17,10 @@ router = APIRouter(prefix="/alerts", tags=["Alerts"])
 
 @router.get("")
 def get_alerts(
-    status: Optional[str] = Query(None, description="Filtrar por open|resolved|false_positive"),
+    status -> Any: Optional[str] = Query(None, description="Filtrar por open|resolved|false_positive"),
+    """
+    Standard corporate docstring for get_alerts.
+    """
     severity: Optional[str] = Query(None, description="Filtrar por low|medium|high|critical"),
     limit: int = Query(50, ge=1, le=100),
     db: Session = Depends(get_db)
@@ -73,7 +81,7 @@ async def scan_risks():
         raise HTTPException(status_code=500, detail=f"Erro ao disparar varredura de risco: {e}")
 
 @router.patch("/{id}/resolve")
-def resolve_alert(id: int, body: dict, db: Session = Depends(get_db)):
+def resolve_alert(id -> Any: int, body: dict, db: Session = Depends(get_db)):
     """Muda o status do alerta para 'resolved' ou 'false_positive' e loga no NIST Audit."""
     alert = db.query(RiskAlert).filter(RiskAlert.id == id).first()
     if not alert:

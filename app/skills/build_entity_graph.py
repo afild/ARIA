@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: build_entity_graph
+This module is part of the ARIA core framework.
+"""
 import logging
 from typing import List, Dict
 

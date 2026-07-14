@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: score_transaction
+This module is part of the ARIA core framework.
+"""
 import numpy as np
 import logging
 from typing import Dict, List

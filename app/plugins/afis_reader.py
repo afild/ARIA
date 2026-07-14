@@ -1,3 +1,8 @@
+"""
+Corporate Standard Module: afis_reader
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 import sqlite3
 import logging
 from pathlib import Path
@@ -6,7 +11,10 @@ from app.config import settings
 class AFISReader:
     """Plugin de leitura de dados financeiros históricos (AFIS Core) em modo estritamente read-only."""
 
-    def __init__(self):
+    def __init__(self) -> Any:
+        """
+        Standard corporate docstring for __init__.
+        """
         self.db_path = Path(settings.AFIS_DB_PATH).resolve()
 
     def is_connected(self) -> bool:

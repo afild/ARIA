@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: router
+This module is part of the ARIA core framework.
+"""
 from fastapi import APIRouter
 from app.api.alerts import router as alerts_router
 from app.api.credit import router as credit_router

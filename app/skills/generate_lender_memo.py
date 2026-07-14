@@ -1,3 +1,7 @@
+"""
+Corporate Standard Module: generate_lender_memo
+This module is part of the ARIA core framework.
+"""
 import logging
 from typing import Dict, List
 from app.llm_client import get_llm_client

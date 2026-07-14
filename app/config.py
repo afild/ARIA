@@ -1,8 +1,15 @@
+"""
+Corporate Standard Module: config
+This module is part of the ARIA core framework.
+"""
 from pydantic_settings import BaseSettings
 from pathlib import Path
 import os
 
 class Settings(BaseSettings):
+    """
+    Corporate Standard Class: Settings.
+    """
     # Caminhos
     BASE_DIR: Path = Path(__file__).parent.parent
     ARIA_DB_PATH: str = "aria_risk.db"
@@ -34,6 +41,9 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
 
     class Config:
+        """
+        Corporate Standard Class: Config.
+        """
         env_file = ".env"
         env_file_encoding = "utf-8"
 

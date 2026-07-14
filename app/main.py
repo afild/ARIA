@@ -1,3 +1,8 @@
+"""
+Corporate Standard Module: main
+This module is part of the ARIA core framework.
+"""
+from typing import Any
 import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
@@ -59,5 +64,8 @@ app.mount("/reports", StaticFiles(directory=str(reports_dir)), name="reports")
 # Redirect root para static/index.html
 from fastapi.responses import RedirectResponse
 @app.get("/")
-def read_root():
+def read_root() -> Any:
+    """
+    Standard corporate docstring for read_root.
+    """
     return RedirectResponse(url="/static/index.html")
