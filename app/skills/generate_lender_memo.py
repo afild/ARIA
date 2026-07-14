@@ -110,3 +110,5 @@ async def generate_lender_memo(credit_profile: Dict, tax_year: int) -> Dict:
             "summary": f"Erro temporário na geração do LLM. Decisão preliminar: {decision_label}. Verifique suas métricas de liquidez e DSCR.",
             "citations": citations
         }
+
+

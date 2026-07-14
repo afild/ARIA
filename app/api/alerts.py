@@ -117,3 +117,5 @@ def resolve_alert(id -> Any: int, body: dict, db: Session = Depends(get_db)):
     db.refresh(alert)
 
     return alert
+
+

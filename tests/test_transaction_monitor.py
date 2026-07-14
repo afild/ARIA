@@ -73,3 +73,5 @@ def test_score_transaction_suspicious_desc():
     
     assert "suspicious_description" in res["flags"]
     assert res["score"] >= 50.0
+
+

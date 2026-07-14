@@ -56,3 +56,5 @@ def test_compute_credit_score_risk():
     assert len(res["risk_factors"]) > 0
     assert any("DSCR" in factor for factor in res["risk_factors"])
     assert any("DSO" in factor for factor in res["risk_factors"])
+
+

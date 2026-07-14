@@ -67,3 +67,5 @@ class AFISReader:
         except Exception as e:
             logging.error(f"Erro ao buscar transações por período no AFIS: {e}")
             return []
+
+

@@ -27,3 +27,5 @@ def get_graph_connections() -> Any:
         return graph_data
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao extrair conexões do grafo: {e}")
+
+

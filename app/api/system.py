@@ -48,3 +48,5 @@ def get_audit_logs(db -> Any: Session = Depends(get_db)):
     """Retorna os logs de auditoria NIST AI RMF."""
     logs = db.query(NISTAuditLog).order_by(NISTAuditLog.created_at.desc()).limit(100).all()
     return logs
+
+

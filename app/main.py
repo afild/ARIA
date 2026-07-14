@@ -69,3 +69,5 @@ def read_root() -> Any:
     Standard corporate docstring for read_root.
     """
     return RedirectResponse(url="/static/index.html")
+
+

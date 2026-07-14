@@ -78,3 +78,5 @@ async def run_lender_report(state: Dict) -> Dict:
         "report_path": str(generated_file_path.name),
         "completed_steps": state.get("completed_steps", []) + ["lender_report"]
     }
+
+

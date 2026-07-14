@@ -96,3 +96,5 @@ class NISTAuditLog(Base):
     description = Column(Text, nullable=False)
     metadata_json = Column(Text, nullable=True)        # JSON string
     created_at = Column(DateTime, default=datetime.utcnow)
+
+

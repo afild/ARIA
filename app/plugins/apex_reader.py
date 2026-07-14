@@ -88,3 +88,5 @@ class APEXReader:
         except Exception as e:
             logging.error(f"Erro ao obter contrapartes do APEX: {e}")
             return []
+
+

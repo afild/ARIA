@@ -151,3 +151,5 @@ def build_aria_graph() -> StateGraph:
 
 # Compila a instância global do Grafo
 ARIA_GRAPH = build_aria_graph()
+
+

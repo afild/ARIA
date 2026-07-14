@@ -137,3 +137,5 @@ def score_transaction(tx: Dict, history: List[Dict], contamination: float = 0.05
             "flags": flags,
             "explanation": f"Fallback Z-Score: valor de ${amount:.2f} com desvio {z_score:.2f}."
         }
+
+

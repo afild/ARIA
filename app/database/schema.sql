@@ -86,3 +86,5 @@ INSERT OR IGNORE INTO aria_settings (key, value) VALUES
     ('critical_alert_threshold', '0.75'),          -- Score acima disso vira alerta imediato
     ('target_debt_service_ratio', '1.25'),         -- DSCR ideal exigido por bancos
     ('experian_mock_rating', 'good');              -- Rating mock do bureau de crédito
+
+

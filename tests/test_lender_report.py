@@ -41,3 +41,5 @@ async def test_generate_lender_memo_declined():
     assert memo["decision"] == "declined"
     assert "summary" in memo
     assert len(memo["citations"]) >= 0
+
+

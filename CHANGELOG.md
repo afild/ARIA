@@ -11,3 +11,5 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 - **Skills e Sub-agentes**: Orquestração completa no LangGraph contendo monitoramento de transações, grafos de rede e cálculo de Credit Score com SHAP.
 - **API FastAPI**: Endpoints de status, varredura de riscos, créditos e streaming SSE no advisor chat.
 - **Frontend SPA Premium**: CSS roxo/violeta glassmorphic com suporte a todas as 10 animações obrigatórias especificadas.
+
+

@@ -65,3 +65,5 @@ def explain_risk(shap_explanations: Dict[str, float], score: int) -> List[Dict]:
     # Ordena pelo impacto absoluto (maiores impactos primeiro)
     explanations.sort(key=lambda x: x["points"], reverse=True)
     return explanations
+
+

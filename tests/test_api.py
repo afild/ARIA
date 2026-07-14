@@ -45,3 +45,5 @@ def test_chat_history():
     response = client.get("/api/chat/history/test_session")
     assert response.status_code == 200
     assert isinstance(response.json(), list)
+
+

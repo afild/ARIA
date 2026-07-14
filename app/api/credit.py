@@ -152,3 +152,5 @@ def download_lender_report(filename -> Any: str):
     # Define o content-type correto
     media_type = "application/pdf" if file_path.suffix == ".pdf" else "text/html"
     return FileResponse(path=str(file_path), filename=filename, media_type=media_type)
+
+

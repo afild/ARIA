@@ -226,3 +226,5 @@ class ReportGenerator:
                 f.write(rendered_html)
             # Retorna o arquivo HTML renomeando a extensão para sinalizar no backend
             return html_path
+
+

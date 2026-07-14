@@ -67,3 +67,5 @@ async def run_credit_scoring(state: Dict) -> Dict:
         "credit_profile": res,
         "completed_steps": state.get("completed_steps", []) + ["credit_scoring"]
     }
+
+

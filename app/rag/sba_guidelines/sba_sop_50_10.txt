@@ -7,3 +7,5 @@
 [SBA SOP 50 10, Sec. 4] Concentração de Recebíveis: Se um único cliente representa mais de 25% do faturamento total anual da empresa, o analista deve classificar o empréstimo com "Risco de Concentração de Recebíveis". A perda desse cliente principal colocaria em risco imediato a capacidade de honrar a dívida.
 
 [SBA SOP 50 10, Sec. 5] Histórico de Fraudes e Alertas Contábeis: Qualquer sinal de anomalia transacional severa, como transferências repetitivas para contas não identificadas ou faturas duplicadas identificadas no contas a pagar, exige investigação completa e bloqueia o processamento do empréstimo até a resolução.
+
+
