@@ -36,7 +36,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="ARIA — AI Risk & Fraud Intelligence Analyzer",
     description="Modulo de gerenciamento de risco, fraudes contábeis e elegibilidade de crédito (SBA)",
-    version="0.1.0",
+    version="0.2.0",
     lifespan=lifespan
 )
 

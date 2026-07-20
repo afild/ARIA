@@ -277,7 +277,7 @@ Areas where contributions are most needed:
 
 ## Changelog
 
-### Latest: v0.1.0
+### Latest: v0.2.0
 - Full risk analysis pipeline: transaction monitoring, graph analytics, credit scoring, SBA RAG, NIST audit
 
 ---
